@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aethera Digital</title>
+    <meta name="description" content="Learn about Aethera Digital - a high-performance web development, SEO & marketing agency crafting stunning digital experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+        .page-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+        .page-hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .page-hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .about-story {
+            padding: 100px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        .story-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .story-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .story-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            backdrop-filter: blur(16px);
+            max-width: 380px;
+            width: 100%;
+        }
+        .story-year {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--primary-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .story-year-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+        .story-milestone {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+        .milestone-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+        .milestone-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .values-section {
+            padding: 100px 0;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 60px;
+        }
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 36px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0,242,254,0.3);
+        }
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--border-radius-lg);
+            background: rgba(0,242,254,0.05);
+            border: 1px solid rgba(0,242,254,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .value-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .value-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        .team-section {
+            padding: 100px 0;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 60px;
+        }
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 36px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        .team-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(127,0,255,0.3);
+        }
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin: 0 auto 20px;
+        }
+        .team-name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .team-role {
+            font-size: 0.85rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .team-bio {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .why-section {
+            padding: 100px 0;
+            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border-color);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+        .why-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 28px;
+            transition: var(--transition-smooth);
+        }
+        .why-item:hover {
+            border-color: rgba(0,245,160,0.3);
+        }
+        .why-num {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--primary-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .why-content h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .why-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .page-hero-title { font-size: 2.5rem; }
+            .story-layout { grid-template-columns: 1fr; gap: 40px; }
+            .values-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M12 7l6 11H6l6-11z" fill="url(#logo-grad-inner)"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/>
+                            </linearGradient>
+                            <linearGradient id="logo-grad-inner" x1="6" y1="7" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7f00ff"/><stop offset="1" stop-color="#e100ff"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                AETHERA
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm glowing-btn">Let's Talk</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-nav-links">
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="contact.html" class="btn btn-primary glowing-btn mobile-cta">Let's Talk</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="scroll-reveal fade-up">
+                    <div class="page-hero-badge"><span class="pulse-dot"></span> Our Story</div>
+                    <h1 class="page-hero-title">We Build <span class="gradient-text">Digital Futures</span></h1>
+                    <p class="page-hero-sub">Aethera Digital is a team of passionate engineers, designers, and strategists dedicated to crafting high-velocity digital experiences that generate real results.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="about-story">
+            <div class="container">
+                <div class="story-layout">
+                    <div class="scroll-reveal fade-up">
+                        <h2 class="section-title">How We <span class="gradient-text">Started</span></h2>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 20px;">
+                            Aethera Digital was founded with a single mission: to bridge the gap between beautiful design and high-performance technology. We saw too many businesses struggling with slow, outdated websites that were losing them customers and revenue.
+                        </p>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 20px;">
+                            Our founders came from top-tier tech companies and digital agencies, bringing together decades of combined experience in web development, SEO, and digital marketing. We knew there was a better way.
+                        </p>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8;">
+                            Today, we've helped over 150 businesses transform their digital presence, driving millions in revenue and dominating search rankings across competitive industries.
+                        </p>
+                    </div>
+                    <div class="story-visual scroll-reveal fade-up delay-2">
+                        <div class="story-card">
+                            <div class="story-year">2020</div>
+                            <div class="story-year-label">Founded</div>
+                            <div class="story-milestone">
+                                <div class="milestone-dot"></div>
+                                <div class="milestone-text">Started with 3 founding engineers in Rawalpindi</div>
+                            </div>
+                            <div class="story-milestone">
+                                <div class="milestone-dot" style="background: var(--color-green);"></div>
+                                <div class="milestone-text">First 10 clients — 100% satisfaction rate</div>
+                            </div>
+                            <div class="story-milestone">
+                                <div class="milestone-dot" style="background: #e100ff;"></div>
+                                <div class="milestone-text">Expanded to full-stack digital services</div>
+                            </div>
+                            <div class="story-milestone">
+                                <div class="milestone-dot" style="background: #ffbd2e;"></div>
+                                <div class="milestone-text">150+ projects delivered across 20+ industries</div>
+                            </div>
+                            <div class="story-milestone">
+                                <div class="milestone-dot" style="background: var(--color-primary);"></div>
+                                <div class="milestone-text">$45M+ revenue driven for clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Our Core <span class="gradient-text">Values</span></h2>
+                    <p class="section-subtitle">Everything we do is guided by these principles that shape how we work, think, and deliver results.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card scroll-reveal fade-up">
+                        <div class="value-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Excellence First</h3>
+                        <p class="value-desc">We never settle for "good enough." Every pixel, every line of code, and every strategy is crafted to the highest standard possible.</p>
+                    </div>
+                    <div class="value-card scroll-reveal fade-up delay-1">
+                        <div class="value-icon" style="background: rgba(127,0,255,0.05); border-color: rgba(127,0,255,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7f00ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Speed & Performance</h3>
+                        <p class="value-desc">Performance is not an afterthought. We engineer solutions that load fast, rank high, and convert better than anything you've seen before.</p>
+                    </div>
+                    <div class="value-card scroll-reveal fade-up delay-2">
+                        <div class="value-icon" style="background: rgba(0,245,160,0.05); border-color: rgba(0,245,160,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Client Partnership</h3>
+                        <p class="value-desc">We don't just build for you — we build with you. Your success is our success, and we treat every client relationship as a long-term partnership.</p>
+                    </div>
+                    <div class="value-card scroll-reveal fade-up delay-3">
+                        <div class="value-icon" style="background: rgba(255,189,46,0.05); border-color: rgba(255,189,46,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffbd2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Transparency</h3>
+                        <p class="value-desc">No hidden fees, no vague promises. We communicate clearly at every stage — from discovery to deployment and beyond.</p>
+                    </div>
+                    <div class="value-card scroll-reveal fade-up">
+                        <div class="value-icon" style="background: rgba(225,0,255,0.05); border-color: rgba(225,0,255,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e100ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Data Driven</h3>
+                        <p class="value-desc">Every decision we make is backed by data. We measure, analyze, and optimize continuously to ensure maximum ROI for your investment.</p>
+                    </div>
+                    <div class="value-card scroll-reveal fade-up delay-1">
+                        <div class="value-icon" style="background: rgba(0,242,254,0.05); border-color: rgba(0,242,254,0.15);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Security & Reliability</h3>
+                        <p class="value-desc">We build with security at the core. Your data and your customers' data are always protected with enterprise-grade security standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Meet the <span class="gradient-text">Team</span></h2>
+                    <p class="section-subtitle">A group of passionate digital engineers, designers, and strategists working together to build extraordinary experiences.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card scroll-reveal fade-up">
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #00f2fe, #4facfe);">MA</div>
+                        <h3 class="team-name">Muhammad Arslan</h3>
+                        <div class="team-role">Founder & Lead Developer</div>
+                        <p class="team-bio">Full-stack developer with 8+ years of experience building high-performance web applications and digital platforms.</p>
+                    </div>
+                    <div class="team-card scroll-reveal fade-up delay-1">
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #7f00ff, #e100ff);">SJ</div>
+                        <h3 class="team-name">Sara Jamil</h3>
+                        <div class="team-role">Head of Design & UX</div>
+                        <p class="team-bio">Award-winning UI/UX designer specializing in conversion-focused design systems and immersive digital experiences.</p>
+                    </div>
+                    <div class="team-card scroll-reveal fade-up delay-2">
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #00f5a0, #00d9f6);">AK</div>
+                        <h3 class="team-name">Ali Khan</h3>
+                        <div class="team-role">SEO & Growth Strategist</div>
+                        <p class="team-bio">Data-driven SEO specialist who has helped clients achieve top rankings and 300%+ organic traffic growth across multiple industries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-section">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Why Choose <span class="gradient-text">Aethera</span></h2>
+                    <p class="section-subtitle">Here's what makes us different from every other agency out there.</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item scroll-reveal fade-up">
+                        <div class="why-num">01</div>
+                        <div class="why-content">
+                            <h4>Performance-First Approach</h4>
+                            <p>Every project is built with Core Web Vitals and PageSpeed as a top priority. We don't just build websites — we build performance engines.</p>
+                        </div>
+                    </div>
+                    <div class="why-item scroll-reveal fade-up delay-1">
+                        <div class="why-num">02</div>
+                        <div class="why-content">
+                            <h4>Full-Service Digital Agency</h4>
+                            <p>From logo design to SEO, from mobile apps to hosting — we handle everything under one roof. No more managing multiple vendors.</p>
+                        </div>
+                    </div>
+                    <div class="why-item scroll-reveal fade-up delay-2">
+                        <div class="why-num">03</div>
+                        <div class="why-content">
+                            <h4>Proven Track Record</h4>
+                            <p>150+ successful projects, $45M+ in client revenue generated, and a 100% client satisfaction rate speaks for itself.</p>
+                        </div>
+                    </div>
+                    <div class="why-item scroll-reveal fade-up delay-3">
+                        <div class="why-num">04</div>
+                        <div class="why-content">
+                            <h4>Fast Turnaround Times</h4>
+                            <p>We work efficiently without sacrificing quality. Most projects are delivered within 4-6 weeks with multiple revision rounds included.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="padding: 100px 0; text-align: center;">
+            <div class="container">
+                <div class="scroll-reveal fade-up">
+                    <h2 class="section-title">Ready to Work <span class="gradient-text">Together?</span></h2>
+                    <p class="section-subtitle" style="margin: 0 auto 40px; max-width: 500px;">Let's build something extraordinary. Reach out today and get a free website audit and consultation.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg glowing-btn">Start Your Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/>
+                        </svg>
+                    </span>
+                    AETHERA
+                </a>
+                <p class="footer-desc">Crafting high-velocity digital products that rank, optimize, and convert users.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn" class="social-link">LN</a>
+                    <a href="#" aria-label="Twitter/X" class="social-link">TW</a>
+                    <a href="#" aria-label="GitHub" class="social-link">GH</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Agency Navigation</h4>
+                <ul>
+                    <li><a href="services.html">Services Suite</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Engine Updates</h4>
+                <p>Get performance optimization reports and design ideas twice a month.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="you@company.com" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p class="copyright">&copy; 2026 Aethera Digital. All rights reserved.</p>
+                <div class="bottom-policies">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+HTMLEOF
+echo "about.html created"
