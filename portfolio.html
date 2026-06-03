@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Aethera Digital</title>
+    <meta name="description" content="Explore Aethera Digital's portfolio of high-performance websites, mobile apps, and digital marketing campaigns.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M12 7l6 11H6l6-11z" fill="url(#logo-grad-inner)"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/></linearGradient>
+                            <linearGradient id="logo-grad-inner" x1="6" y1="7" x2="18" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#7f00ff"/><stop offset="1" stop-color="#e100ff"/></linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                AETHERA
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm glowing-btn">Let's Talk</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-nav-links">
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="contact.html" class="btn btn-primary glowing-btn mobile-cta">Let's Talk</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="scroll-reveal fade-up">
+                    <div class="page-hero-badge"><span class="pulse-dot"></span> Our Work</div>
+                    <h1 class="page-hero-title">Case <span class="gradient-text">Showcases</span></h1>
+                    <p class="page-hero-sub">Real results for real clients. Explore how we've transformed businesses with high-performance digital solutions.</p>
+                </div>
+                <div class="filter-bar scroll-reveal fade-up delay-1">
+                    <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+                    <button class="filter-btn" onclick="filterProjects('webdev', this)">Web Development</button>
+                    <button class="filter-btn" onclick="filterProjects('seo', this)">SEO</button>
+                    <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile Apps</button>
+                    <button class="filter-btn" onclick="filterProjects('design', this)">Design</button>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 0 0 100px;">
+            <div class="container">
+                <div class="portfolio-full-grid" id="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="port-card scroll-reveal fade-up" data-cat="webdev">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+                                <div style="background: rgba(10,15,30,0.9); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); padding: 16px; width: 75%; height: 65%;">
+                                    <div style="height: 6px; width: 40px; background: rgba(255,255,255,0.2); border-radius: 3px; margin-bottom: 12px;"></div>
+                                    <svg viewBox="0 0 100 30" width="100%" height="60%"><path d="M0,25 Q15,5 30,18 T60,5 T90,2 T100,0" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag">E-Commerce Development</span>
+                            <h3 class="port-title">Aura Apothecary</h3>
+                            <p class="port-desc">Rebuilt a headless commerce suite, transforming a slow legacy store into a lightning-fast shopping experience.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val">0.4s</div><div class="metric-label">Load Time</div></div>
+                                <div class="metric"><div class="metric-val">+47%</div><div class="metric-label">Checkouts</div></div>
+                                <div class="metric"><div class="metric-val">100</div><div class="metric-label">PageSpeed</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">React</span><span class="tech-tag">Next.js</span><span class="tech-tag">Shopify</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="port-card scroll-reveal fade-up delay-1" data-cat="seo">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #5b0060, #870060);">
+                                <div style="background: rgba(10,15,30,0.9); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); padding: 16px; width: 75%; height: 65%; display: flex; flex-direction: column; gap: 8px;">
+                                    <div style="height: 6px; width: 40px; background: rgba(255,255,255,0.2); border-radius: 3px;"></div>
+                                    <div style="display: flex; align-items: flex-end; gap: 6px; flex: 1; padding-top: 8px;">
+                                        <div style="height: 30%; width: 14px; background: linear-gradient(135deg,#7f00ff,#e100ff); border-radius: 3px;"></div>
+                                        <div style="height: 50%; width: 14px; background: linear-gradient(135deg,#7f00ff,#e100ff); border-radius: 3px;"></div>
+                                        <div style="height: 75%; width: 14px; background: linear-gradient(135deg,#7f00ff,#e100ff); border-radius: 3px;"></div>
+                                        <div style="height: 100%; width: 14px; background: linear-gradient(135deg,#00f2fe,#4facfe); border-radius: 3px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag">Advanced SEO & Content</span>
+                            <h3 class="port-title">Summit Capital</h3>
+                            <p class="port-desc">Dominated high-value financial keywords through technical SEO overhaul and strategic content campaigns.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val">+320%</div><div class="metric-label">Traffic</div></div>
+                                <div class="metric"><div class="metric-val">$12M</div><div class="metric-label">Pipeline</div></div>
+                                <div class="metric"><div class="metric-val">#1</div><div class="metric-label">Rankings</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">SEO</span><span class="tech-tag">Content</span><span class="tech-tag">Analytics</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="port-card scroll-reveal fade-up delay-2" data-cat="mobile">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #0f2027, #203a43);">
+                                <div style="background: rgba(10,15,30,0.9); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); padding: 16px; width: 75%; height: 65%; display: flex; align-items: center; justify-content: center;">
+                                    <div style="width: 70px; height: 70px; border-radius: 50%; border: 3.5px solid #00f5a0; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; box-shadow: 0 0 15px rgba(0,245,160,0.3);">99</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag">Mobile App Design</span>
+                            <h3 class="port-title">Hyperion SaaS</h3>
+                            <p class="port-desc">Native iOS application with stunning UI/UX that acquired 50k active users and dramatically reduced churn.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val">50k</div><div class="metric-label">Users</div></div>
+                                <div class="metric"><div class="metric-val">-38%</div><div class="metric-label">Churn</div></div>
+                                <div class="metric"><div class="metric-val">4.9★</div><div class="metric-label">App Store</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">iOS</span><span class="tech-tag">Swift</span><span class="tech-tag">Figma</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="port-card scroll-reveal fade-up" data-cat="design">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #0d1117, #1a1f2e);">
+                                <div style="background: rgba(15,22,36,0.9); border-radius: 10px; border: 1px solid rgba(0,242,254,0.2); padding: 20px; width: 75%; height: 65%; display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                                    <div style="height: 8px; background: linear-gradient(135deg,#00f2fe,#4facfe); border-radius: 4px; width: 60%;"></div>
+                                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; width: 80%;"></div>
+                                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; width: 50%;"></div>
+                                    <div style="margin-top: 8px; display: flex; gap: 6px;">
+                                        <div style="height: 28px; width: 70px; background: linear-gradient(135deg,#00f2fe,#4facfe); border-radius: 6px;"></div>
+                                        <div style="height: 28px; width: 50px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag">Brand Identity & Design</span>
+                            <h3 class="port-title">NovaTech Startup</h3>
+                            <p class="port-desc">Complete brand identity package including logo, design system, and landing page for a Series A funded tech startup.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val">3x</div><div class="metric-label">Brand Recall</div></div>
+                                <div class="metric"><div class="metric-val">+65%</div><div class="metric-label">Conversions</div></div>
+                                <div class="metric"><div class="metric-val">2wk</div><div class="metric-label">Delivery</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">Figma</span><span class="tech-tag">Illustrator</span><span class="tech-tag">HTML</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="port-card scroll-reveal fade-up delay-1" data-cat="webdev">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #1a0533, #2d0d4f);">
+                                <div style="background: rgba(10,5,20,0.9); border-radius: 10px; border: 1px solid rgba(127,0,255,0.2); padding: 16px; width: 75%; height: 65%;">
+                                    <div style="height: 6px; width: 40px; background: rgba(255,255,255,0.15); border-radius: 3px; margin-bottom: 10px;"></div>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                                        <div style="height: 30px; background: rgba(127,0,255,0.2); border: 1px solid rgba(127,0,255,0.3); border-radius: 4px;"></div>
+                                        <div style="height: 30px; background: rgba(127,0,255,0.2); border: 1px solid rgba(127,0,255,0.3); border-radius: 4px;"></div>
+                                        <div style="height: 30px; background: rgba(127,0,255,0.2); border: 1px solid rgba(127,0,255,0.3); border-radius: 4px;"></div>
+                                        <div style="height: 30px; background: linear-gradient(135deg,#7f00ff,#e100ff); border-radius: 4px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag" style="color: #e100ff;">Web App Development</span>
+                            <h3 class="port-title">PurpleDesk CRM</h3>
+                            <p class="port-desc">Custom CRM and client management portal built for a growing consulting firm with advanced analytics dashboard.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val" style="color: #e100ff;">-60%</div><div class="metric-label">Admin Time</div></div>
+                                <div class="metric"><div class="metric-val" style="color: #e100ff;">200+</div><div class="metric-label">Users</div></div>
+                                <div class="metric"><div class="metric-val" style="color: #e100ff;">6wk</div><div class="metric-label">Build Time</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="port-card scroll-reveal fade-up delay-2" data-cat="seo">
+                        <div class="port-img">
+                            <div class="port-img-bg" style="background: linear-gradient(135deg, #0a2a1a, #0d3d25);">
+                                <div style="background: rgba(5,20,12,0.9); border-radius: 10px; border: 1px solid rgba(0,245,160,0.2); padding: 16px; width: 75%; height: 65%;">
+                                    <div style="height: 6px; width: 40px; background: rgba(255,255,255,0.15); border-radius: 3px; margin-bottom: 10px;"></div>
+                                    <div style="display: flex; align-items: flex-end; gap: 5px; height: 70%;">
+                                        <div style="flex:1; background: rgba(0,245,160,0.3); border-radius: 3px 3px 0 0; height: 40%;"></div>
+                                        <div style="flex:1; background: rgba(0,245,160,0.4); border-radius: 3px 3px 0 0; height: 55%;"></div>
+                                        <div style="flex:1; background: rgba(0,245,160,0.5); border-radius: 3px 3px 0 0; height: 70%;"></div>
+                                        <div style="flex:1; background: rgba(0,245,160,0.7); border-radius: 3px 3px 0 0; height: 85%;"></div>
+                                        <div style="flex:1; background: #00f5a0; border-radius: 3px 3px 0 0; height: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port-body">
+                            <span class="port-tag" style="color: var(--color-green);">Local SEO Campaign</span>
+                            <h3 class="port-title">GreenLeaf Clinics</h3>
+                            <p class="port-desc">Multi-location local SEO strategy for a healthcare provider, driving 5x more appointment bookings from organic search.</p>
+                            <div class="port-metrics">
+                                <div class="metric"><div class="metric-val" style="color: var(--color-green);">+500%</div><div class="metric-label">Bookings</div></div>
+                                <div class="metric"><div class="metric-val" style="color: var(--color-green);">8</div><div class="metric-label">Locations</div></div>
+                                <div class="metric"><div class="metric-val" style="color: var(--color-green);">#1</div><div class="metric-label">Local Pack</div></div>
+                            </div>
+                            <div class="port-footer">
+                                <div class="port-tech"><span class="tech-tag">Local SEO</span><span class="tech-tag">GMB</span><span class="tech-tag">Schema</span></div>
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="container">
+                <div class="stats-bar-grid">
+                    <div class="scroll-reveal fade-up">
+                        <div class="bar-stat-num gradient-text">150+</div>
+                        <div class="bar-stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="scroll-reveal fade-up delay-1">
+                        <div class="bar-stat-num gradient-text">$45M+</div>
+                        <div class="bar-stat-label">Revenue Generated</div>
+                    </div>
+                    <div class="scroll-reveal fade-up delay-2">
+                        <div class="bar-stat-num gradient-text">100%</div>
+                        <div class="bar-stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="scroll-reveal fade-up delay-3">
+                        <div class="bar-stat-num gradient-text">20+</div>
+                        <div class="bar-stat-label">Industries Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <section style="padding: 80px 0; text-align: center;">
+            <div class="container">
+                <div class="scroll-reveal fade-up">
+                    <h2 class="section-title">Ready to Be Our <span class="gradient-text">Next Success Story?</span></h2>
+                    <p class="section-subtitle" style="margin: 0 auto 40px; max-width: 500px;">Let's discuss your project and see how Aethera Digital can transform your digital presence.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg glowing-btn">Start Your Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/></svg>
+                    </span>AETHERA
+                </a>
+                <p class="footer-desc">Crafting high-velocity digital products that rank, optimize, and convert users.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn" class="social-link">LN</a>
+                    <a href="#" aria-label="Twitter" class="social-link">TW</a>
+                    <a href="#" aria-label="GitHub" class="social-link">GH</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Agency Navigation</h4>
+                <ul>
+                    <li><a href="services.html">Services Suite</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Engine Updates</h4>
+                <p>Get performance optimization reports and design ideas twice a month.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="you@company.com" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p class="copyright">&copy; 2026 Aethera Digital. All rights reserved.</p>
+                <div class="bottom-policies"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function filterProjects(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.port-card').forEach(card => {
+                if (cat === 'all' || card.dataset.cat === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
