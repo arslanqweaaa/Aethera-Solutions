@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Redirecting…</title>
-  <meta http-equiv="refresh" content="0;url=/home.html">
-  <link rel="canonical" href="/home.html">
-  <script>location.replace('/home.html');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethera Digital | High-Performance Web Solutions</title>
+    <meta name="description" content="Aethera Digital crafts stunning, lightning-fast websites, optimizes core web vitals, boosts search rankings, and runs revenue-generating digital marketing campaigns.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  Redirecting to <a href="/home.html">home</a>.
+
+    <!-- Ambient Background Lighting Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M12 7l6 11H6l6-11z" fill="url(#logo-grad-inner)"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00f2fe"/>
+                                <stop offset="1" stop-color="#4facfe"/>
+                            </linearGradient>
+                            <linearGradient id="logo-grad-inner" x1="6" y1="7" x2="18" y2="18" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7f00ff"/>
+                                <stop offset="1" stop-color="#e100ff"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                AETHERA
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero scroll-reveal">
+        <div class="hero-content">
+            <h1 class="hero-title">Digital Solutions That Drive Results</h1>
+            <p class="hero-subtitle">We craft stunning websites, optimize performance, and launch campaigns that generate real revenue for your business.</p>
+            <div class="hero-cta">
+                <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+                <a href="services.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-graphic">
+                <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="150" r="80" fill="url(#hero-grad)" opacity="0.3"/>
+                    <circle cx="150" cy="100" r="50" stroke="url(#hero-grad)" stroke-width="2" opacity="0.6"/>
+                    <circle cx="250" cy="200" r="60" stroke="url(#hero-grad)" stroke-width="2" opacity="0.5"/>
+                    <defs>
+                        <linearGradient id="hero-grad" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe"/>
+                            <stop offset="1" stop-color="#4facfe"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features scroll-reveal">
+        <div class="features-header">
+            <h2>Why Choose Aethera Digital?</h2>
+            <p>We combine strategy, design, and technology to deliver results.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card scroll-reveal">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized websites that load in milliseconds, keeping your visitors engaged.</p>
+            </div>
+            <div class="feature-card scroll-reveal">
+                <div class="feature-icon">🎯</div>
+                <h3>SEO Optimized</h3>
+                <p>Built for search engines. Ranked high on Google, Bing, and beyond.</p>
+            </div>
+            <div class="feature-card scroll-reveal">
+                <div class="feature-icon">💰</div>
+                <h3>Revenue Driven</h3>
+                <p>Digital marketing campaigns designed to convert visitors into customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta scroll-reveal">
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Let's work together to build something amazing.</p>
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Aethera Digital</h4>
+                <p>High-performance web solutions for modern businesses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> Aethera Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RedirectingΓÇª</title>
+  <meta http-equiv="refresh" content="0;url=/home.html">
+  <link rel="canonical" href="/home.html">
+  <script>location.replace('/home.html');</script>
+</head>
+<body>
+  Redirecting to <a href="/home.html">home</a>.
+</body>
+</html>
