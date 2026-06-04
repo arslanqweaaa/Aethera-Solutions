@@ -5,44 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aethera Digital | High-Performance Web Solutions & Digital Marketing</title>
     <meta name="description" content="Aethera Digital crafts stunning, lightning-fast websites, optimizes core web vitals, boosts search rankings, and runs revenue-generating digital marketing campaigns.">
+    <link rel="canonical" href="https://aethera-solutions.vercel.app/">
+    <meta property="og:title" content="Aethera Digital | High-Performance Web Solutions & Digital Marketing">
+    <meta property="og:description" content="Aethera Digital crafts stunning, lightning-fast websites, optimizes core web vitals, boosts search rankings, and runs revenue-generating digital marketing campaigns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aethera-solutions.vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Ambient Background Lighting Glows -->
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="ambient-glow glow-3"></div>
 
-    <!-- Navigation Header -->
     <header id="main-header" class="site-header">
         <div class="header-container">
-            <a href="index.html" class="logo" id="header-logo">
+            <a href="index.html" class="logo">
                 <span class="logo-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2L2 22h20L12 2z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linejoin="round"/>
                         <path d="M12 7l6 11H6l6-11z" fill="url(#logo-grad-inner)"/>
                         <defs>
                             <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00f2fe"/>
-                                <stop offset="1" stop-color="#4facfe"/>
+                                <stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/>
                             </linearGradient>
                             <linearGradient id="logo-grad-inner" x1="6" y1="7" x2="18" y2="18" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#7f00ff"/>
-                                <stop offset="1" stop-color="#e100ff"/>
+                                <stop stop-color="#7f00ff"/><stop offset="1" stop-color="#e100ff"/>
                             </linearGradient>
                         </defs>
                     </svg>
-                </span>
-                AETHERA
+                </span>AETHERA
             </a>
-            
             <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
@@ -50,228 +47,363 @@
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm glowing-btn">Let's Talk</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content scroll-reveal fade-up">
-            <h1 class="hero-title">Digital Solutions That Drive <span class="gradient-text">Real Results</span></h1>
-            <p class="hero-subtitle">We craft stunning websites, optimize performance, and launch campaigns that generate real revenue for your business.</p>
-            <div class="hero-cta">
-                <a href="contact.html" class="btn btn-primary glowing-btn">Get Started Today</a>
-                <a href="services.html" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-        <div class="hero-visual scroll-reveal fade-up delay-1">
-            <div class="hero-graphic">
-                <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="hero-grad" x1="0" y1="0" x2="400" y2="300" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#00f2fe"/>
-                            <stop offset="1" stop-color="#4facfe"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="200" cy="150" r="100" fill="url(#hero-grad)" opacity="0.2" class="animate-pulse"/>
-                    <circle cx="200" cy="150" r="75" stroke="url(#hero-grad)" stroke-width="2" fill="none" opacity="0.5"/>
-                    <circle cx="200" cy="150" r="50" stroke="url(#hero-grad)" stroke-width="2" fill="none" opacity="0.3"/>
-                    <rect x="160" y="110" width="80" height="80" fill="url(#hero-grad)" opacity="0.1" rx="8"/>
-                </svg>
-            </div>
-        </div>
-    </section>
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-nav-links">
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="contact.html" class="btn btn-primary glowing-btn mobile-cta">Let's Talk</a>
+        </nav>
+    </div>
 
-    <!-- Stats Section -->
-    <section class="stats-section scroll-reveal">
-        <div class="container">
-            <h2 class="section-title scroll-reveal fade-up">Our Track Record</h2>
-            <div class="stats-grid">
-                <div class="stat-card scroll-reveal fade-up">
-                    <div class="stat-number" data-target="150">0</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-card scroll-reveal fade-up delay-1">
-                    <div class="stat-number" data-target="98">0</div>
-                    <div class="stat-label">% Client Satisfaction</div>
-                </div>
-                <div class="stat-card scroll-reveal fade-up delay-2">
-                    <div class="stat-number" data-target="12">0</div>
-                    <div class="stat-label">Years Combined Experience</div>
-                </div>
-                <div class="stat-card scroll-reveal fade-up delay-3">
-                    <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Team Members</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview Section -->
-    <section class="services-preview scroll-reveal">
-        <div class="container">
-            <div class="section-header scroll-reveal fade-up">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Everything you need for digital success</p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card scroll-reveal fade-up">
-                    <div class="service-glow" style="background: radial-gradient(circle, rgba(0,242,254,0.15) 0%, transparent 70%);"></div>
-                    <div class="service-icon-box">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <line x1="3" y1="9" x2="21" y2="9"/>
-                        </svg>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <canvas id="particle-canvas" class="particle-canvas"></canvas>
+            
+            <div class="container hero-container">
+                <!-- Left Content -->
+                <div class="hero-content scroll-reveal fade-up">
+                    <div class="badge-container">
+                        <span class="hero-badge">
+                            <span class="pulse-dot"></span> Peak Performance Engine V2.0
+                        </span>
                     </div>
-                    <h3 class="service-card-title">Web Development</h3>
-                    <p class="service-card-desc">Lightning-fast, scalable websites built with modern technologies.</p>
-                    <a href="services.html" class="service-link">Learn More →</a>
-                </div>
-
-                <div class="service-card scroll-reveal fade-up delay-1">
-                    <div class="service-glow" style="background: radial-gradient(circle, rgba(0,245,160,0.15) 0%, transparent 70%);"></div>
-                    <div class="service-icon-box">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00f5a0" stroke-width="2">
-                            <path d="M12 2L2 22h20L12 2z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-card-title">SEO Optimization</h3>
-                    <p class="service-card-desc">Dominate search rankings and drive organic traffic.</p>
-                    <a href="services.html" class="service-link">Learn More →</a>
-                </div>
-
-                <div class="service-card scroll-reveal fade-up delay-2">
-                    <div class="service-glow" style="background: radial-gradient(circle, rgba(127,0,255,0.15) 0%, transparent 70%);"></div>
-                    <div class="service-icon-box">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7f00ff" stroke-width="2">
-                            <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"/>
-                            <line x1="12" y1="12" x2="20" y2="7.5"/>
-                            <line x1="12" y1="12" x2="12" y2="21"/>
-                            <line x1="12" y1="12" x2="4" y2="7.5"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-card-title">Digital Marketing</h3>
-                    <p class="service-card-desc">Strategic campaigns that convert and generate revenue.</p>
-                    <a href="services.html" class="service-link">Learn More →</a>
-                </div>
-            </div>
-
-            <div class="services-cta scroll-reveal fade-up">
-                <a href="services.html" class="btn btn-secondary">View All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="featured-projects scroll-reveal">
-        <div class="container">
-            <div class="section-header scroll-reveal fade-up">
-                <h2 class="section-title">Featured Work</h2>
-                <p class="section-subtitle">Check out what we've built for our clients</p>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="port-card scroll-reveal fade-up">
-                    <div class="port-img">
-                        <div class="port-img-bg" style="background: linear-gradient(135deg, #1e3c72, #2a5298);"></div>
-                    </div>
-                    <div class="port-body">
-                        <span class="port-tag">E-Commerce</span>
-                        <h3 class="port-title">Aura Apothecary</h3>
-                        <p class="port-desc">Rebuilt a headless commerce suite, transforming a slow legacy store into a lightning-fast shopping experience.</p>
+                    <h1 class="hero-title">Engineering High Velocity <span class="gradient-text">Digital Engines</span></h1>
+                    <p class="hero-subtitle">We build lightning-fast web architectures backed by algorithmic technical SEO optimization to convert visitors into high-ticket clients.</p>
+                    <div class="hero-actions">
+                        <a href="#planner" class="btn btn-primary btn-lg glowing-btn">Start Estimation <span class="btn-icon">→</span></a>
+                        <a href="#services" class="btn btn-secondary btn-lg">Explore Architecture</a>
                     </div>
                 </div>
 
-                <div class="port-card scroll-reveal fade-up delay-1">
-                    <div class="port-img">
-                        <div class="port-img-bg" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
-                    </div>
-                    <div class="port-body">
-                        <span class="port-tag">SaaS Platform</span>
-                        <h3 class="port-title">DataVault Analytics</h3>
-                        <p class="port-desc">Created a real-time analytics dashboard with advanced data visualization for enterprise clients.</p>
-                    </div>
-                </div>
+                <!-- Right Visual (Dashboard Mockup) -->
+                <div class="hero-visual scroll-reveal fade-left">
+                    <div class="floating-element element-1">AI Optimized</div>
+                    <div class="floating-element element-2">Global CDN</div>
+                    <div class="floating-element element-3">Schema Vitals</div>
+                    
+                    <div class="visual-wrapper">
+                        <div class="dashboard-mockup">
+                            <div class="mockup-header">
+                                <div class="dots">
+                                    <div class="dot red"></div>
+                                    <div class="dot yellow"></div>
+                                    <div class="dot green"></div>
+                                </div>
+                                <div class="url-bar">https://your-brand.com/scale</div>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-grid">
+                                    
+                                    <div class="mockup-card main-stats">
+                                        <div class="stat-circle">
+                                            <svg viewBox="0 0 36 36" class="circular-chart green-chart">
+                                                <defs>
+                                                    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                        <stop id="stop-color-1" offset="0%" stop-color="#ff4b2b" />
+                                                        <stop id="stop-color-2" offset="100%" stop-color="#ff416c" />
+                                                    </linearGradient>
+                                                    <filter id="shadow">
+                                                        <feDropShadow dx="0" dy="0" stdDeviation="3" id="shadow-glow-color" flood-color="#ff4b2b" flood-opacity="0.6"/>
+                                                    </filter>
+                                                </defs>
+                                                <path class="circle-bg"
+                                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                <path class="circle" stroke="url(#glow)" stroke-dasharray="100, 100" filter="url(#shadow)" id="dial-progress" style="stroke-dashoffset: 380; stroke-dasharray: 400; transition: stroke-dashoffset 2s ease-in-out;"
+                                                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                <text x="18" y="19.5" class="percentage"><tspan id="dial-score">42</tspan></text>
+                                                <text x="18" y="26" class="percentage" style="font-size: 3.5px; fill: var(--text-muted);" id="dial-status">SLOW</text>
+                                            </svg>
+                                        </div>
+                                        <div class="speed-controls" style="margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                            <div class="glow-ring" style="padding: 10px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 75, 43, 0.05) 0%, transparent 70%); transition: all 1s;">
+                                                <button id="optimize-btn" class="btn btn-sm btn-outline" style="border-color: var(--color-primary); color: var(--color-primary); font-size: 0.75rem; padding: 6px 12px; background: transparent; border-width: 1.5px; border-style: solid; border-radius: 6px; cursor: pointer;">Supercharge Performance</button>
+                                                <button id="reset-speed-btn" class="btn btn-sm btn-secondary" style="display: none; font-size: 0.75rem; padding: 6px 12px; background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; cursor: pointer;">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <div class="port-card scroll-reveal fade-up delay-2">
-                    <div class="port-img">
-                        <div class="port-img-bg" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
-                    </div>
-                    <div class="port-body">
-                        <span class="port-tag">Corporate Website</span>
-                        <h3 class="port-title">TechCorp Solutions</h3>
-                        <p class="port-desc">Designed and built a modern corporate presence with CMS integration and lead capture systems.</p>
+                                    <div class="mockup-card">
+                                        <h4 class="card-title">Core Web Vitals</h4>
+                                        <ul style="list-style:none; padding:0; margin:0; font-size:0.7rem;">
+                                            <li style="margin-bottom:6px;"><span id="bullet-lcp" class="feat-bullet red-bullet">❌ <span id="lcp-val">3.8s</span> LCP</span></li>
+                                            <li style="margin-bottom:6px;"><span id="bullet-tbt" class="feat-bullet red-bullet">❌ <span id="tbt-val">480ms</span> TBT</span></li>
+                                            <li><span id="bullet-seo" class="feat-bullet red-bullet">❌ <span id="fid-val" style="display:none;">110ms</span> Low Ranking Penalty</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="mockup-card">
+                                        <h4 class="card-title">Conversions</h4>
+                                        <div class="bar-chart">
+                                            <div class="bar" style="height: 20%;"></div>
+                                            <div class="bar" style="height: 35%;"></div>
+                                            <div class="bar" style="height: 50%;"></div>
+                                            <div class="bar" style="height: 80%;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="portfolio-cta scroll-reveal fade-up">
-                <a href="portfolio.html" class="btn btn-primary">View All Projects</a>
+        <!-- STATS SECTION -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; padding: 40px 0;">
+                    <div class="stat-item scroll-reveal fade-up">
+                        <div class="stat-number-row">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Platforms Deployed</span>
+                    </div>
+                    <div class="stat-item scroll-reveal fade-up" style="transition-delay: 100ms;">
+                        <div class="stat-number-row">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-suffix">M+</span>
+                        </div>
+                        <span class="stat-label">Revenue Generated</span>
+                    </div>
+                    <div class="stat-item scroll-reveal fade-up" style="transition-delay: 200ms;">
+                        <div class="stat-number-row">
+                            <span class="stat-number" data-target="99">0</span>
+                            <span class="stat-suffix">.9%</span>
+                        </div>
+                        <span class="stat-label">Uptime Architecture</span>
+                    </div>
+                    <div class="stat-item scroll-reveal fade-up" style="transition-delay: 300ms;">
+                        <div class="stat-number-row">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-suffix">X</span>
+                        </div>
+                        <span class="stat-label">Average ROI</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Us Section -->
-    <section class="why-us scroll-reveal">
-        <div class="container">
-            <h2 class="section-title scroll-reveal fade-up">Why Aethera Digital?</h2>
-            <div class="why-us-grid">
-                <div class="why-card scroll-reveal fade-up">
-                    <div class="why-icon">✓</div>
-                    <h3>Expert Team</h3>
-                    <p>Years of experience across web development, design, and digital marketing.</p>
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">High-Octane <span class="gradient-text">Service Suite</span></h2>
+                    <p class="section-desc" style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 20px auto;">We don't just build websites; we engineer digital assets designed to dominate search rankings and maximize conversion rates.</p>
                 </div>
-                <div class="why-card scroll-reveal fade-up delay-1">
-                    <div class="why-icon">✓</div>
-                    <h3>Results Focused</h3>
-                    <p>We measure success by your business growth and ROI, not just deliverables.</p>
-                </div>
-                <div class="why-card scroll-reveal fade-up delay-2">
-                    <div class="why-icon">✓</div>
-                    <h3>Agile Process</h3>
-                    <p>Flexible, transparent, and collaborative approach to every project.</p>
-                </div>
-                <div class="why-card scroll-reveal fade-up delay-3">
-                    <div class="why-icon">✓</div>
-                    <h3>24/7 Support</h3>
-                    <p>Ongoing maintenance, monitoring, and optimization of your digital assets.</p>
+                
+                <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <!-- Web Design -->
+                    <div class="service-card card-glass scroll-reveal fade-up" style="padding: 30px;">
+                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🎨</span></div>
+                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">UX/UI Design</h3>
+                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Immersive, user-centric interfaces crafted with neuro-design principles to significantly boost engagement.</p>
+                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Architecture →</a>
+                    </div>
+                    
+                    <!-- Full Stack Dev -->
+                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 100ms; padding: 30px;">
+                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">⚡</span></div>
+                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Next-Gen Development</h3>
+                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Lightning-fast architectures built for infinite scalability and security.</p>
+                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Tech Stack →</a>
+                    </div>
+                    
+                    <!-- SEO -->
+                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 200ms; padding: 30px;">
+                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🚀</span></div>
+                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Algorithmic SEO</h3>
+                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Deep technical SEO, schema markup, and content silos to dominate search.</p>
+                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View SEO Strategy →</a>
+                    </div>
+                    
+                    <!-- Conversion Optimization -->
+                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 300ms; padding: 30px;">
+                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">📈</span></div>
+                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">CRO & Funnel Mapping</h3>
+                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Data-driven A/B testing and funnel optimization to turn traffic into paying customers.</p>
+                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Conversion Logic →</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-main scroll-reveal">
-        <h2>Ready to Grow Your Business?</h2>
-        <p>Let's create something amazing together. Get a free consultation today.</p>
-        <a href="contact.html" class="btn btn-primary glowing-btn btn-lg">Schedule Free Consultation</a>
-    </section>
+        <!-- COST & TIMELINE PLANNER -->
+        <section id="planner" class="planner-section" style="padding: 100px 0; background: rgba(0,0,0,0.2);">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Solution <span class="gradient-text">Estimator</span></h2>
+                    <p class="section-desc" style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 20px auto;">Get a transparent projection of timelines and investments for your next digital leap.</p>
+                </div>
 
-    <!-- Footer -->
+                <div class="planner-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <!-- Left: Inputs -->
+                    <div class="planner-inputs scroll-reveal fade-right">
+                        <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Select Required Infrastructure</h3>
+                        
+                        <div class="services-selector" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                            <label class="selector-card card-glass" style="padding: 15px; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" name="calc-service" value="webdesign" style="accent-color: var(--color-primary);">
+                                <span>Web Design</span>
+                            </label>
+                            <label class="selector-card card-glass" style="padding: 15px; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" name="calc-service" value="webdev" style="accent-color: var(--color-primary);">
+                                <span>Development</span>
+                            </label>
+                            <label class="selector-card card-glass" style="padding: 15px; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" name="calc-service" value="seo" style="accent-color: var(--color-primary);">
+                                <span>Advanced SEO</span>
+                            </label>
+                            <label class="selector-card card-glass" style="padding: 15px; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" name="calc-service" value="hosting" style="accent-color: var(--color-primary);">
+                                <span>Cloud Hosting</span>
+                            </label>
+                        </div>
+
+                        <h3 style="margin-bottom: 20px; font-family: var(--font-heading);">Project Scale & Complexity</h3>
+                        <div class="scale-slider-container">
+                            <input type="range" id="scale-slider" min="1" max="3" value="1" style="width: 100%; accent-color: var(--color-primary);">
+                            <div class="slider-labels" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.85rem; color: var(--text-muted);">
+                                <span class="label-opt active-lbl">MVP</span>
+                                <span class="label-opt">Growth</span>
+                                <span class="label-opt">Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary Output -->
+                    <div class="planner-summary card-glass scroll-reveal fade-left" style="padding: 40px;">
+                        <h3 style="margin-bottom: 10px; font-family: var(--font-heading);">Estimated Investment</h3>
+                        <div class="price-display" style="margin-bottom: 20px;">
+                            <span style="font-size: 3.5rem; font-family: var(--font-heading); font-weight: 800; color: var(--color-primary);">$<span id="price-number">0</span></span>
+                            <div id="price-schedule" style="color: var(--text-muted); font-size: 0.9rem;">Choose offerings above</div>
+                        </div>
+                        
+                        <h4 style="margin-bottom: 15px; font-family: var(--font-heading);">Roadmap & Deliverables</h4>
+                        <ul id="roadmap-summary" style="list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+                            <li><span class="check-icon">⚠</span> Please select at least one growth service.</li>
+                        </ul>
+
+                        <button id="calculator-cta" class="btn btn-primary btn-block glowing-btn" style="margin-top: 30px;">Initialize Project Setup</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section" style="padding: 120px 0; overflow: hidden;">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Client <span class="gradient-text">Success Matrix</span></h2>
+                </div>
+                
+                <div class="testimonial-slider-container" style="position: relative; max-width: 800px; margin: 0 auto; overflow: hidden;">
+                    <div id="testimonial-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card" style="min-width: 100%; padding: 40px; text-align: center;">
+                            <div class="quote-icon" style="font-size: 3rem; color: var(--color-primary); opacity: 0.5; margin-bottom: 20px;">"</div>
+                            <p class="testimonial-text" style="font-size: 1.2rem; font-style: italic; margin-bottom: 30px;">Aethera Digital transformed our conversion rate overnight. Their technical SEO expertise pushed us to #1 for our top keywords in just 3 months.</p>
+                            <h4 class="client-name" style="font-family: var(--font-heading); color: #fff;">Sarah Jenkins</h4>
+                            <span class="client-role" style="color: var(--text-muted); font-size: 0.85rem;">CMO, TechFlow Inc</span>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card" style="min-width: 100%; padding: 40px; text-align: center;">
+                            <div class="quote-icon" style="font-size: 3rem; color: var(--color-primary); opacity: 0.5; margin-bottom: 20px;">"</div>
+                            <p class="testimonial-text" style="font-size: 1.2rem; font-style: italic; margin-bottom: 30px;">The fastest web application we've ever deployed. The LCP drop from 4s to 0.5s directly correlated with a 40% jump in our sales.</p>
+                            <h4 class="client-name" style="font-family: var(--font-heading); color: #fff;">Michael Chen</h4>
+                            <span class="client-role" style="color: var(--text-muted); font-size: 0.85rem;">Founder, E-Commerce Elevate</span>
+                        </div>
+                    </div>
+                    <div class="dot-navs" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                        <span class="dot-nav active" data-index="0" style="width: 12px; height: 12px; border-radius: 50%; background: var(--text-muted); cursor: pointer;"></span>
+                        <span class="dot-nav" data-index="1" style="width: 12px; height: 12px; border-radius: 50%; background: var(--text-muted); cursor: pointer;"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / CTA SECTION -->
+        <section id="contact" class="contact-section" style="padding: 100px 0; background: linear-gradient(to top, rgba(0,242,254,0.05) 0%, transparent 100%);">
+            <div class="container">
+                <div class="contact-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+                    <div class="contact-content scroll-reveal fade-right">
+                        <h2 class="section-title" style="margin-bottom: 20px;">Ready to <span class="gradient-text">Dominate?</span></h2>
+                        <p class="section-desc" style="margin-bottom: 40px; color: var(--text-muted); line-height: 1.6;">Drop your details below and our architecture team will reach out within 24 hours to map out your growth trajectory.</p>
+                        
+                        <div class="contact-info" style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;">📧</span>
+                                <span>hello@aethera-digital.com</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;">🌍</span>
+                                <span>New York | London | Remote</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper card-glass scroll-reveal fade-left" style="padding: 40px;">
+                        <form id="agency-contact-form" class="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; font-size: 0.85rem; color: var(--text-muted);">Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; outline: none;">
+                                <span id="name-error" style="color: var(--color-danger); font-size: 0.75rem; display: none; margin-top: 5px;">Please enter your name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; font-size: 0.85rem; color: var(--text-muted);">Email</label>
+                                <input type="email" id="form-email" placeholder="john@company.com" style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; outline: none;">
+                                <span id="email-error" style="color: var(--color-danger); font-size: 0.75rem; display: none; margin-top: 5px;">Please enter a valid email.</span>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; font-size: 0.85rem; color: var(--text-muted);">Service Required</label>
+                                <select id="form-service" style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; outline: none;">
+                                    <option value="all" style="background: #0f172a;">Full Growth Package</option>
+                                    <option value="webdesign" style="background: #0f172a;">Web Design</option>
+                                    <option value="webdev" style="background: #0f172a;">Development</option>
+                                    <option value="seo" style="background: #0f172a;">SEO</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary glowing-btn" style="margin-top: 10px; border: none; font-size: 1rem; cursor: pointer;">Send Transmission</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Aethera Digital</h4>
-                <p>High-performance web solutions for modern businesses.</p>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/>
+                        </svg>
+                    </span>AETHERA
+                </a>
+                <p class="footer-desc">Crafting high-velocity digital products that rank, optimize, and convert users.</p>
             </div>
-            <div class="footer-section">
-                <h4>Services</h4>
+            <div class="footer-links">
+                <h4>Agency Navigation</h4>
                 <ul>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">SEO Optimization</a></li>
-                    <li><a href="services.html">Digital Marketing</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
+                    <li><a href="services.html">Services Suite</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -280,7 +412,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2026</span> Aethera Digital. All rights reserved.</p>
+            <div class="container bottom-container">
+                <p class="copyright">&copy; <span id="current-year"></span> Aethera Digital. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
