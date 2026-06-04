@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aethera Digital</title>
+    <meta name="description" content="Get in touch with Aethera Digital. Start your high-performance web development or SEO project today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero { padding: 160px 0 80px; text-align: center; }
+        .page-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; color: var(--color-primary); margin-bottom: 24px; }
+        .page-hero-title { font-family: var(--font-heading); font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .page-hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+        .contact-page-section { padding: 60px 0 120px; }
+        .contact-page-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: start; }
+        .contact-info-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); padding: 44px; backdrop-filter: blur(16px); }
+        .contact-info-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+        .contact-info-sub { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 36px; line-height: 1.7; }
+        .channel-item { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+        .channel-icon { width: 52px; height: 52px; border-radius: var(--border-radius-md); background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .channel-details { display: flex; flex-direction: column; }
+        .channel-lbl { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+        .channel-val { font-size: 1rem; font-weight: 600; color: var(--text-main); text-decoration: none; transition: var(--transition-smooth); }
+        a.channel-val:hover { color: var(--color-primary); }
+        .divider { height: 1px; background: var(--border-color); margin: 32px 0; }
+        .office-hours-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+        .hours-row { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px; }
+        .hours-day { color: var(--text-muted); }
+        .hours-time { color: var(--text-main); font-weight: 500; }
+        .hours-time.open { color: var(--color-green); }
+        .contact-form-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); padding: 44px; backdrop-filter: blur(16px); position: relative; overflow: hidden; }
+        .agency-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        .form-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+        .form-input { background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: var(--border-radius-md); padding: 12px 16px; color: var(--text-main); font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: var(--transition-smooth); }
+        .form-input:focus { background: rgba(255,255,255,0.04); border-color: var(--color-primary); box-shadow: 0 0 10px rgba(0,242,254,0.15); }
+        .form-select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238a99ad' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; padding-right: 40px; }
+        .form-select option { background-color: #0b0f19; color: var(--text-main); }
+        .error-msg { font-size: 0.75rem; color: #ff5f56; margin-top: 4px; display: none; }
+        .form-input.invalid { border-color: #ff5f56; }
+        .form-success-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11,15,25,0.97); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px; z-index: 10; opacity: 0; pointer-events: none; transform: scale(0.95); transition: var(--transition-smooth); }
+        .form-success-container.show { opacity: 1; pointer-events: auto; transform: scale(1); }
+        .success-icon-wrapper { width: 80px; height: 80px; border-radius: 50%; background: rgba(0,245,160,0.08); border: 2.5px solid var(--color-green); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 0 20px rgba(0,245,160,0.2); }
+        .success-title { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
+        .success-message { font-size: 0.95rem; color: var(--text-muted); max-width: 320px; margin-bottom: 28px; }
+        .faq-section { padding: 100px 0; background: rgba(0,0,0,0.2); border-top: 1px solid var(--border-color); }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); padding: 28px; transition: var(--transition-smooth); cursor: pointer; }
+        .faq-item:hover { border-color: rgba(0,242,254,0.3); }
+        .faq-q { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+        @media (max-width: 1024px) { .contact-page-layout { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .page-hero-title { font-size: 2.5rem; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="home.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M12 7l6 11H6l6-11z" fill="url(#logo-grad-inner)"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00f2fe"/><stop offset="1" stop-color="#4facfe"/></linearGradient>
+                            <linearGradient id="logo-grad-inner" x1="6" y1="7" x2="18" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#7f00ff"/><stop offset="1" stop-color="#e100ff"/></linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                AETHERA
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm glowing-btn">Let's Talk</a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <nav class="mobile-nav-links">
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="contact.html" class="btn btn-primary glowing-btn mobile-cta">Let's Talk</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="scroll-reveal fade-up">
+                    <div class="page-hero-badge"><span class="pulse-dot"></span> Get In Touch</div>
+                    <h1 class="page-hero-title">Let's <span class="gradient-text">Accelerate</span> Together</h1>
+                    <p class="page-hero-sub">Ready to transform your digital presence? Our engineers will audit your website speed and SEO rankings — completely free of charge.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-page-section">
+            <div class="container">
+                <div class="contact-page-layout">
+                    <!-- Contact Info -->
+                    <div class="scroll-reveal fade-up">
+                        <div class="contact-info-card">
+                            <h2 class="contact-info-title">Contact Information</h2>
+                            <p class="contact-info-sub">Reach out through any of the channels below. We typically respond within 4 hours during business hours.</p>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">Email Us Directly</span>
+                                    <a href="mailto:jarralarslan16@gmail.com" class="channel-val">jarralarslan16@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7f00ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.82 3.38 2 2 0 0 1 3.8 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.96-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">Call or WhatsApp</span>
+                                    <a href="tel:+923195885023" class="channel-val">0319 5885023</a>
+                                </div>
+                            </div>
+
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">Our Office</span>
+                                    <span class="channel-val">Bahria Town Phase 7, Rawalpindi</span>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="office-hours-title">Office Hours</div>
+                            <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time open">9:00 AM – 6:00 PM</span></div>
+                            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time open">10:00 AM – 3:00 PM</span></div>
+                            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time" style="color: #ff5f56;">Closed</span></div>
+
+                            <div class="divider"></div>
+
+                            <div class="office-hours-title">Response Time</div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-top: 8px;">
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-green); box-shadow: 0 0 8px rgba(0,245,160,0.6);"></div>
+                                <span style="font-size: 0.9rem; color: var(--text-muted);">We typically reply within <strong style="color: var(--text-main);">4 hours</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="scroll-reveal fade-up delay-2">
+                        <div class="contact-form-card">
+                            <form id="agency-contact-form" class="agency-form" novalidate>
+                                <div style="margin-bottom: 4px;">
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; margin-bottom: 6px;">Send a Project Brief</h3>
+                                    <p style="font-size: 0.9rem; color: var(--text-muted);">Fill in the details below and we'll get back to you with a custom plan.</p>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-name" class="form-label">Full Name *</label>
+                                        <input type="text" id="form-name" class="form-input" placeholder="e.g. Marcus Aureli" required>
+                                        <span class="error-msg" id="name-error">Please enter your name</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-email" class="form-label">Email Address *</label>
+                                        <input type="email" id="form-email" class="form-input" placeholder="e.g. marcus@aura.com" required>
+                                        <span class="error-msg" id="email-error">Please enter a valid email</span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-phone" class="form-label">Phone Number</label>
+                                        <input type="tel" id="form-phone" class="form-input" placeholder="e.g. +92 300 0000000">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-budget" class="form-label">Budget Range</label>
+                                        <select id="form-budget" class="form-input form-select">
+                                            <option value="">Select budget</option>
+                                            <option value="small">$500 – $1,500</option>
+                                            <option value="medium">$1,500 – $5,000</option>
+                                            <option value="large">$5,000 – $15,000</option>
+                                            <option value="enterprise">$15,000+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-service" class="form-label">Service Focus</label>
+                                    <select id="form-service" class="form-input form-select">
+                                        <option value="all">Full Suite</option>
+                                        <option value="logo">Logo Design</option>
+                                        <option value="webdesign">Website Design</option>
+                                        <option value="webdev">Website Development</option>
+                                        <option value="mobile">Mobile App</option>
+                                        <option value="hosting">Hosting</option>
+                                        <option value="seo">SEO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-message" class="form-label">Project Details</label>
+                                    <textarea id="form-message" rows="5" class="form-input" placeholder="Describe your brand, platform challenges, or traffic goals..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block glowing-btn" id="submit-btn">Send Project Brief</button>
+                            </form>
+
+                            <div class="form-success-container" id="form-success-screen">
+                                <div class="success-icon-wrapper">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00f5a0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <h3 class="success-title">Brief Received!</h3>
+                                <p class="success-message">Our technical director will review your platform parameters and email you within 4 hours. Let's make something amazing together!</p>
+                                <button id="success-reset-btn" class="btn btn-outline btn-sm">Submit Another Brief</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header scroll-reveal fade-up">
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="section-subtitle">Got questions? We've got answers. If you don't see yours here, just reach out directly.</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item scroll-reveal fade-up">
+                        <div class="faq-q">How long does a typical project take? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">Most website projects are completed within 4–6 weeks. Mobile apps typically take 8–12 weeks. SEO campaigns show significant results within 3–6 months of launch.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal fade-up delay-1">
+                        <div class="faq-q">Do you offer free consultations? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">Yes! We offer a free 30-minute strategy session that includes a website speed audit and SEO analysis for your current website. No commitment required.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal fade-up delay-2">
+                        <div class="faq-q">What's included in your SEO service? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">Our SEO service covers technical audits, on-page optimization, keyword strategy, schema markup, link building, and monthly performance reporting with full competitor tracking.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal fade-up delay-3">
+                        <div class="faq-q">Can you redesign my existing website? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">Absolutely. We specialize in website redesigns that improve both aesthetics and performance. We preserve your SEO rankings while modernizing the design and boosting speed.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal fade-up">
+                        <div class="faq-q">What payment methods do you accept? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">We accept bank transfers, PayPal, and major credit cards. Projects are typically billed 50% upfront and 50% upon delivery, with milestone payments for larger projects.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal fade-up delay-1">
+                        <div class="faq-q">Do you provide ongoing support? <span style="color: var(--color-primary);">+</span></div>
+                        <div class="faq-a">Yes, we offer monthly maintenance and support packages that include updates, security monitoring, performance optimization, and priority technical support.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="home.html" class="logo footer-logo">
+                    <span class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/></svg></span>AETHERA
+                </a>
+                <p class="footer-desc">Crafting high-velocity digital products that rank, optimize, and convert users.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn" class="social-link">LN</a>
+                    <a href="#" aria-label="Twitter" class="social-link">TW</a>
+                    <a href="#" aria-label="GitHub" class="social-link">GH</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Agency Navigation</h4>
+                <ul>
+                    <li><a href="services.html">Services Suite</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Engine Updates</h4>
+                <p>Get performance optimization reports and design ideas twice a month.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="you@company.com" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p class="copyright">&copy; 2026 Aethera Digital. All rights reserved.</p>
+                <div class="bottom-policies"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
