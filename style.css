@@ -404,21 +404,38 @@ body {
 .whatsapp-float {
     position: fixed;
     right: 20px;
-    bottom: 22px;
+    bottom: calc(22px + env(safe-area-inset-bottom, 0px));
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg,#25D366,#128C7E);
+    background: linear-gradient(135deg,#25D366 0%,#128C7E 100%);
     border-radius: 50%;
-    box-shadow: 0 8px 24px rgba(18,140,126,0.18);
+    box-shadow: 0 10px 30px rgba(18,140,126,0.2);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     z-index: 2000;
     text-decoration: none;
     color: white;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
-.whatsapp-float svg { width: 22px; height: 22px; }
-.whatsapp-float:hover { transform: translateY(-4px); }
+.whatsapp-float svg { width: 22px; height: 22px; display: block; }
+.whatsapp-float:hover { transform: translateY(-3px); }
+
+/* Responsive tweaks for WhatsApp button */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        right: calc(14px + env(safe-area-inset-right, 0px));
+        bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    }
+    .whatsapp-float svg { width: 20px; height: 20px; }
+}
+
+@media (max-width: 360px) {
+    .whatsapp-float { width: 44px; height: 44px; right: 12px; bottom: 12px; }
+}
 
 
 .particle-canvas {
@@ -2046,6 +2063,11 @@ a.channel-val:hover {
     .hero-visual {
         margin-top: 40px;
     }
+
+    /* tighten header on mobile */
+    .header-container { padding: 12px 16px; }
+    .logo { font-size: 1.25rem; }
+    .mobile-link { font-size: 1.4rem; }
     
     .stats-grid {
         grid-template-columns: 1fr 1fr;
