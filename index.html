@@ -391,14 +391,14 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="logo footer-logo">
-                    <span class="logo-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/>
-                            <path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/>
-                        </svg>
-                    </span>AETHERA
+                    <span class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 22h20L12 2z" stroke="#00f2fe" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 7l6 11H6l6-11z" fill="#7f00ff"/></svg></span>AETHERA
                 </a>
                 <p class="footer-desc">Crafting high-velocity digital products that rank, optimize, and convert users.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn" class="social-link">LN</a>
+                    <a href="#" aria-label="Twitter" class="social-link">TW</a>
+                    <a href="#" aria-label="GitHub" class="social-link">GH</a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Agency Navigation</h4>
@@ -410,14 +410,26 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            <div class="footer-newsletter">
+                <h4>Engine Updates</h4>
+                <p>Get performance optimization reports and design ideas twice a month.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!'); this.reset();">
+                    <input type="email" placeholder="you@company.com" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">→</button>
+                </form>
+            </div>
         </div>
         <div class="footer-bottom">
             <div class="container bottom-container">
-                <p class="copyright">&copy; <span id="current-year"></span> Aethera Digital. All rights reserved.</p>
+                <p class="copyright">&copy; 2026 Aethera Digital. All rights reserved.</p>
+                <div class="bottom-policies"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/923195885023?text=Hello%20Aethera%20Digital%2C%20I%20found%20your%20site%20and%20would%20like%20to%20discuss%20a%20project" class="whatsapp-float" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 3.5c-2.5-2.5-6.6-2.8-9.6-.7-3 2.1-4.4 6-3.4 9.5L3 21l8.7-4.2c3.5 1 7.4-.4 9.5-3.4 2.1-3 .2-7.1-2.7-9.9z" stroke="rgba(255,255,255,0.9)" stroke-width="0" fill="rgba(0,0,0,0)"/><path d="M16.6 7.9c-.4-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.4-.8 1-1 1.2-.2.2-.4.2-.9 0-.5-.2-2-0-3.8-2.3-.6-.8-.3-1.2.2-1.5.6-.3 1.3-.8 1.6-1 .3-.2.4-.4.6-.6.2-.2.1-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.7-.5-1-0-.3.5-1 1.3-1.4 1.7-.4.4-.9.9-1.1 1.7-.2.8.2 1.5.5 2 .3.5 1 1.1 1.8 1.8.8.7 1.7 1.3 2.5 1.6.8.3 1.3.4 1.8.3.5-.1 1.5-.6 1.7-1 .2-.4.2-.8 0-1.1-.2-.3-1.1-1-1.5-1.2z" fill="#fff"/></svg>
+    </a>
     <script src="app.js"></script>
 </body>
 </html>
