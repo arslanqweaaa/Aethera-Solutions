@@ -2453,206 +2453,139 @@ a.channel-val:hover {
 
 
 
-        /* ==========================================
-   AETHERA DIGITAL — RESPONSIVE PATCH
-   Drop this <link> AFTER style.css on every page.
-   ========================================== */
-
 /* ==========================================
-   AETHERA DIGITAL — RESPONSIVE PATCH
-   Paste at the BOTTOM of style.css
-   Desktop (1024px+) is completely untouched.
+   MOBILE ONLY — max 768px
+   Desktop/laptop completely untouched
    ========================================== */
 
-/* ==========================================
-   TABLET  (max-width: 1024px)
-   ========================================== */
-/* ==========================================
-   AETHERA DIGITAL — RESPONSIVE PATCH
-   Paste at the BOTTOM of style.css
-   Desktop (1024px+) is completely untouched.
-   ========================================== */
+@media (max-width: 768px) {
 
-/* ==========================================
-   TABLET  (max-width: 1024px)
-   ========================================== */
-@media (max-width: 1024px) {
-
-  /* Hero: stack to single column */
-  .hero-container {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-    gap: 48px;
-  }
-  .hero-content { align-items: center; }
-  .hero-title { font-size: 3rem; }
-  .hero-actions { justify-content: center; flex-wrap: wrap; }
-  .hero-visual { margin-top: 0; justify-content: center; }
-
-  /* Hide desktop nav, show hamburger */
+  /* NAV */
   .nav-menu { display: none !important; }
   .mobile-nav-toggle { display: flex !important; }
 
-  /* Stats 2 col */
-  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Services */
-  .services-grid { grid-template-columns: 1fr !important; }
-
-  /* Planner */
-  .planner-layout,
-  [style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
+  /* HERO */
+  .hero-container {
     grid-template-columns: 1fr !important;
-  }
-
-  /* Contact */
-  .contact-layout,
-  .contact-page-layout {
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-  }
-  .contact-info,
-  .contact-content {
     text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    gap: 32px;
+    padding-top: 20px;
   }
-
-  /* Portfolio */
-  .portfolio-full-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .stats-bar-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Blog */
-  .blog-layout { grid-template-columns: 1fr !important; }
-  .sidebar { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px; }
-
-  /* About */
-  .story-layout { grid-template-columns: 1fr !important; gap: 48px; }
-  .values-grid  { grid-template-columns: repeat(2, 1fr) !important; }
-  .team-grid    { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Footer */
-  .footer-container { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
-  .footer-newsletter { grid-column: span 2 !important; }
-}
-
-/* ==========================================
-   MOBILE  (max-width: 768px)
-   ========================================== */
-@media (max-width: 768px) {
-
-  .hero-title    { font-size: 2.4rem; }
-  .section-title { font-size: 2rem; }
-  .page-hero-title { font-size: 2.2rem !important; }
-  .page-hero { padding: 130px 0 60px !important; }
-
-  /* Buttons stack */
+  .hero-content { align-items: center; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1rem; }
   .hero-actions {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 12px;
   }
   .hero-actions .btn {
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     justify-content: center;
   }
 
-  /* Stats */
-  .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 20px; }
-
-  /* Dashboard mockup inner grid */
-  .mockup-grid { grid-template-columns: 1fr !important; }
-  .mockup-card.main-stats { grid-column: span 1 !important; }
-  .floating-element { display: none; }
-
-  /* Services inline grid (index.html) */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(250px"] {
+  /* DASHBOARD MOCKUP — stop overflow */
+  .hero-visual { width: 100%; overflow: hidden; }
+  .visual-wrapper { max-width: 100%; width: 100%; }
+  .dashboard-mockup { width: 100%; }
+  .mockup-grid {
     grid-template-columns: 1fr !important;
   }
-  [style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
+  .mockup-card.main-stats {
+    grid-column: span 1 !important;
+  }
+  .floating-element { display: none !important; }
+
+  /* STATS — 2 columns */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px;
+  }
+
+  /* SERVICES (index.html inline style) */
+  .services-section .container div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* PLANNER */
+  .planner-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .services-selector {
     grid-template-columns: 1fr 1fr !important;
   }
 
-  /* Planner selector */
-  .services-selector,
-  .services-selector[style] {
-    grid-template-columns: 1fr 1fr !important;
+  /* TESTIMONIALS */
+  .testimonial-card { padding: 24px 16px !important; }
+
+  /* CONTACT */
+  .contact-layout,
+  .contact-page-layout {
+    grid-template-columns: 1fr !important;
   }
 
-  /* Portfolio */
-  .portfolio-full-grid { grid-template-columns: 1fr !important; }
-  .stats-bar-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  /* FOOTER */
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .footer-newsletter { grid-column: span 1 !important; }
+  .bottom-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 
-  /* Blog */
-  .posts-grid { grid-template-columns: 1fr !important; }
+  /* PAGE HERO (about/blog/contact/portfolio) */
+  .page-hero { padding: 120px 0 50px !important; }
+  .page-hero-title { font-size: 2rem !important; }
+
+  /* ABOUT */
+  .story-layout { grid-template-columns: 1fr !important; }
+  .values-grid  { grid-template-columns: 1fr 1fr !important; }
+  .team-grid    { grid-template-columns: 1fr 1fr !important; }
+  .why-grid     { grid-template-columns: 1fr !important; }
+
+  /* PORTFOLIO */
+  .portfolio-full-grid { grid-template-columns: 1fr 1fr !important; }
+  .stats-bar-grid { grid-template-columns: 1fr 1fr !important; }
+  .filter-bar { gap: 8px; }
+  .filter-btn { font-size: 0.8rem; padding: 7px 14px; }
+
+  /* BLOG */
+  .blog-layout { grid-template-columns: 1fr !important; }
+  .posts-grid  { grid-template-columns: 1fr !important; }
   .sidebar { grid-template-columns: 1fr !important; }
-  .featured-img { height: 200px !important; }
 
-  /* About */
-  .values-grid { grid-template-columns: 1fr !important; }
-  .team-grid   { grid-template-columns: 1fr !important; }
-  .why-grid    { grid-template-columns: 1fr !important; }
-
-  /* Contact form row */
+  /* CONTACT FORM */
   .form-row { grid-template-columns: 1fr !important; }
 
-  /* Footer */
-  .footer-container { grid-template-columns: 1fr !important; }
-  .footer-newsletter { grid-column: span 1 !important; }
-  .bottom-container { flex-direction: column; gap: 12px; text-align: center; }
+  /* SECTION TITLE */
+  .section-title { font-size: 2rem; }
 }
 
 /* ==========================================
-   SMALL MOBILE  (max-width: 480px)
+   SMALL MOBILE — max 480px
    ========================================== */
 @media (max-width: 480px) {
 
   .container { padding: 0 16px; }
-  .header-container { padding: 10px 16px; }
+  .hero-title { font-size: 1.8rem; }
+  .section-title { font-size: 1.6rem; }
+  .page-hero-title { font-size: 1.7rem !important; }
 
-  .hero-title     { font-size: 1.95rem; }
-  .section-title  { font-size: 1.75rem; }
-  .page-hero-title { font-size: 1.85rem !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .stat-number { font-size: 2rem; }
 
-  .stat-number { font-size: 2.2rem; }
-  .stat-suffix { font-size: 1.6rem; }
+  .values-grid { grid-template-columns: 1fr !important; }
+  .team-grid   { grid-template-columns: 1fr !important; }
 
-  .service-card { padding: 24px 20px; }
-  .planner-summary { padding: 20px !important; }
+  .portfolio-full-grid { grid-template-columns: 1fr !important; }
+  .stats-bar-grid { grid-template-columns: 1fr 1fr !important; }
 
-  .port-body { padding: 20px; }
-  .port-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .bar-stat-num { font-size: 2rem; }
-
-  .featured-body { padding: 18px !important; }
-  .blog-card-body { padding: 18px; }
-  .sidebar-card { padding: 20px; }
-
-  .story-card { padding: 28px 20px; }
-  .story-year { font-size: 3rem; }
-  .value-card { padding: 24px 18px; }
-  .team-card  { padding: 24px 18px; }
-  .why-item   { flex-direction: column; gap: 12px; }
-
-  .contact-info-card  { padding: 28px 20px; }
-  .contact-form-card  { padding: 24px 18px; }
-  .contact-form-container { padding: 24px !important; }
-
-  .footer-container { gap: 28px !important; }
-  .mobile-link { font-size: 1.3rem; }
-  .testimonial-card { padding: 20px 16px !important; }
-  .testimonial-text { font-size: 0.95rem !important; }
-}
-
-/* ==========================================
-   VERY SMALL  (max-width: 360px)
-   ========================================== */
-@media (max-width: 360px) {
-  .hero-title    { font-size: 1.7rem; }
-  .section-title { font-size: 1.5rem; }
-  .stats-grid    { grid-template-columns: 1fr !important; }
-  .filter-btn    { padding: 7px 12px; font-size: 0.78rem; }
-  .nav-actions .btn-primary.btn-sm { display: none; }
+  .service-card { padding: 24px 18px; }
+  .port-body { padding: 18px; }
+  .story-card { padding: 24px 18px; }
 }
