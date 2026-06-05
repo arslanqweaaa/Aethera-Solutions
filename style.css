@@ -2467,6 +2467,15 @@ a.channel-val:hover {
 /* ==========================================
    TABLET  (max-width: 1024px)
    ========================================== */
+/* ==========================================
+   AETHERA DIGITAL — RESPONSIVE PATCH
+   Paste at the BOTTOM of style.css
+   Desktop (1024px+) is completely untouched.
+   ========================================== */
+
+/* ==========================================
+   TABLET  (max-width: 1024px)
+   ========================================== */
 @media (max-width: 1024px) {
 
   /* Hero: stack to single column */
