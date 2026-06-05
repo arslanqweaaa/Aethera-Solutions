@@ -2458,333 +2458,87 @@ a.channel-val:hover {
    Drop this <link> AFTER style.css on every page.
    ========================================== */
 
-/* ── Base helpers ── */
-img, svg, video, canvas {
-  max-width: 100%;
-  height: auto;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Prevent horizontal overflow globally */
-html, body {
-  overflow-x: hidden;
-}
-
 /* ==========================================
-   HEADER / NAV — all pages
+   AETHERA DIGITAL — RESPONSIVE PATCH
+   Paste at the BOTTOM of style.css
+   Desktop (1024px+) is completely untouched.
    ========================================== */
-.header-container {
-  padding: 12px 20px;
-  gap: 12px;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 /* ==========================================
-   HERO SECTION (index.html)
-   ========================================== */
-.hero-section {
-  padding-top: 100px;
-  min-height: auto;
-}
-
-.hero-container {
-  grid-template-columns: 1fr;
-  gap: 48px;
-  text-align: center;
-}
-
-.hero-content {
-  align-items: center;
-}
-
-.hero-subtitle {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-actions {
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Dashboard mockup floating labels */
-.floating-element {
-  font-size: 0.75rem;
-  padding: 7px 13px;
-}
-
-/* ==========================================
-   STATS (index.html)
-   ========================================== */
-.stats-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-/* ==========================================
-   SERVICES SECTION (index + services pages)
-   ========================================== */
-.services-section {
-  padding: 80px 0;
-}
-
-/* index.html inline-grid services */
-.services-section > .container > div[style*="grid"] {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-}
-
-/* services.html full cards */
-.services-grid {
-  grid-template-columns: 1fr !important;
-}
-
-.service-card {
-  padding: 32px 28px;
-}
-
-/* ==========================================
-   PLANNER / ESTIMATOR (index.html)
-   ========================================== */
-.planner-layout,
-.estimator-layout {
-  grid-template-columns: 1fr !important;
-}
-
-.services-selector {
-  grid-template-columns: 1fr 1fr !important;
-}
-
-.planner-summary {
-  padding: 28px !important;
-}
-
-/* ==========================================
-   TESTIMONIALS (index.html)
-   ========================================== */
-.testimonial-card {
-  padding: 28px 20px !important;
-}
-
-.testimonial-text {
-  font-size: 1rem !important;
-}
-
-/* ==========================================
-   CONTACT SECTION (index + services pages)
-   ========================================== */
-.contact-layout,
-.contact-page-layout {
-  grid-template-columns: 1fr !important;
-  gap: 40px;
-}
-
-.contact-content,
-.contact-info {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-info .channel-item {
-  justify-content: center;
-}
-
-.contact-form-wrapper,
-.contact-form-container {
-  padding: 28px !important;
-}
-
-/* ==========================================
-   PORTFOLIO PAGE (portfolio.html)
-   ========================================== */
-.portfolio-full-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-.filter-bar {
-  gap: 8px;
-  margin: 40px 0 32px;
-}
-
-.filter-btn {
-  padding: 8px 16px;
-  font-size: 0.82rem;
-}
-
-.stats-bar-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-.port-metrics {
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* ==========================================
-   BLOG PAGE (blog.html)
-   ========================================== */
-.blog-layout {
-  grid-template-columns: 1fr !important;
-}
-
-.posts-grid {
-  grid-template-columns: 1fr 1fr !important;
-}
-
-.sidebar {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 20px;
-}
-
-.featured-body {
-  padding: 24px !important;
-}
-
-.post-title {
-  font-size: 1.3rem !important;
-}
-
-/* ==========================================
-   ABOUT PAGE (about.html)
-   ========================================== */
-.story-layout {
-  grid-template-columns: 1fr !important;
-  gap: 48px;
-}
-
-.values-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-.team-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-.why-grid {
-  grid-template-columns: 1fr !important;
-}
-
-/* ==========================================
-   FOOTER — all pages
-   ========================================== */
-.footer-container {
-  grid-template-columns: 1fr 1fr !important;
-  gap: 40px !important;
-}
-
-.footer-newsletter {
-  grid-column: span 2 !important;
-}
-
-.footer-desc {
-  max-width: 100%;
-}
-
-.bottom-container {
-  flex-direction: column;
-  gap: 12px;
-  text-align: center;
-}
-
-/* ==========================================
-   PAGE HERO (about / blog / contact /
-   portfolio / services sub-pages)
-   ========================================== */
-.page-hero {
-  padding: 130px 0 60px !important;
-}
-
-.page-hero-title {
-  font-size: 2.8rem !important;
-}
-
-.page-hero-sub {
-  font-size: 1rem !important;
-}
-
-/* ==========================================
-   SECTION TITLES — all pages
-   ========================================== */
-.section-title {
-  font-size: 2.2rem;
-}
-
-/* ==========================================
-   ===  TABLET  (max 1024px)  ===
+   TABLET  (max-width: 1024px)
    ========================================== */
 @media (max-width: 1024px) {
 
-  /* Hero — two-col to one-col */
+  /* Hero: stack to single column */
   .hero-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     text-align: center;
     gap: 48px;
   }
-
   .hero-content { align-items: center; }
-
   .hero-title { font-size: 3rem; }
+  .hero-actions { justify-content: center; flex-wrap: wrap; }
+  .hero-visual { margin-top: 0; justify-content: center; }
 
-  .hero-visual { margin-top: 0; }
+  /* Hide desktop nav, show hamburger */
+  .nav-menu { display: none !important; }
+  .mobile-nav-toggle { display: flex !important; }
 
-  /* hide desktop nav, show hamburger */
-  .nav-menu { display: none; }
-  .mobile-nav-toggle { display: flex; }
-
-  /* Stats */
+  /* Stats 2 col */
   .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Planner */
-  .planner-layout { grid-template-columns: 1fr !important; }
-
-  /* Contact */
-  .contact-layout,
-  .contact-page-layout { grid-template-columns: 1fr !important; }
-
-  /* Portfolio */
-  .portfolio-full-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Blog sidebar */
-  .blog-layout { grid-template-columns: 1fr !important; }
-  .sidebar { display: grid !important; grid-template-columns: 1fr 1fr !important; }
-
-  /* About */
-  .story-layout { grid-template-columns: 1fr !important; }
-  .values-grid  { grid-template-columns: repeat(2, 1fr) !important; }
-  .team-grid    { grid-template-columns: repeat(2, 1fr) !important; }
 
   /* Services */
   .services-grid { grid-template-columns: 1fr !important; }
 
-  /* Footer */
-  .footer-container { grid-template-columns: 1fr 1fr !important; }
-  .footer-newsletter { grid-column: span 2 !important; }
+  /* Planner */
+  .planner-layout,
+  [style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
+    grid-template-columns: 1fr !important;
+  }
 
-  /* Dashboard mockup */
-  .visual-wrapper { max-width: 400px; }
-  .floating-element.element-2 { left: -20px; }
+  /* Contact */
+  .contact-layout,
+  .contact-page-layout {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+  .contact-info,
+  .contact-content {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Portfolio */
+  .portfolio-full-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-bar-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Blog */
+  .blog-layout { grid-template-columns: 1fr !important; }
+  .sidebar { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 20px; }
+
+  /* About */
+  .story-layout { grid-template-columns: 1fr !important; gap: 48px; }
+  .values-grid  { grid-template-columns: repeat(2, 1fr) !important; }
+  .team-grid    { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Footer */
+  .footer-container { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
+  .footer-newsletter { grid-column: span 2 !important; }
 }
 
 /* ==========================================
-   ===  LARGE MOBILE  (max 768px)  ===
+   MOBILE  (max-width: 768px)
    ========================================== */
 @media (max-width: 768px) {
 
-  /* Typography */
-  .hero-title     { font-size: 2.4rem; }
-  .section-title  { font-size: 2rem; }
+  .hero-title    { font-size: 2.4rem; }
+  .section-title { font-size: 2rem; }
   .page-hero-title { font-size: 2.2rem !important; }
+  .page-hero { padding: 130px 0 60px !important; }
 
-  /* CTA buttons stack */
+  /* Buttons stack */
   .hero-actions {
     flex-direction: column;
     align-items: center;
@@ -2796,214 +2550,100 @@ html, body {
     justify-content: center;
   }
 
-  /* Stats → 1 col */
+  /* Stats */
   .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 20px; }
 
-  /* Dashboard mockup — slim it down */
-  .dashboard-mockup { font-size: 0.85rem; }
+  /* Dashboard mockup inner grid */
   .mockup-grid { grid-template-columns: 1fr !important; }
-  .mockup-card.main-stats { grid-column: span 1; }
-  .url-bar { font-size: 0.65rem; }
-
-  /* Floating labels */
+  .mockup-card.main-stats { grid-column: span 1 !important; }
   .floating-element { display: none; }
 
-  /* Services planner checkboxes */
-  .services-selector { grid-template-columns: 1fr !important; }
+  /* Services inline grid (index.html) */
+  [style*="grid-template-columns: repeat(auto-fit, minmax(250px"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
 
-  /* Portfolio → single col */
+  /* Planner selector */
+  .services-selector,
+  .services-selector[style] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Portfolio */
   .portfolio-full-grid { grid-template-columns: 1fr !important; }
   .stats-bar-grid { grid-template-columns: repeat(2, 1fr) !important; }
 
-  /* Blog posts → single col */
+  /* Blog */
   .posts-grid { grid-template-columns: 1fr !important; }
   .sidebar { grid-template-columns: 1fr !important; }
   .featured-img { height: 200px !important; }
 
   /* About */
-  .values-grid  { grid-template-columns: 1fr !important; }
-  .team-grid    { grid-template-columns: 1fr !important; }
-  .why-grid     { grid-template-columns: 1fr !important; }
+  .values-grid { grid-template-columns: 1fr !important; }
+  .team-grid   { grid-template-columns: 1fr !important; }
+  .why-grid    { grid-template-columns: 1fr !important; }
 
-  /* Contact form */
+  /* Contact form row */
   .form-row { grid-template-columns: 1fr !important; }
 
-  /* Footer → single col */
+  /* Footer */
   .footer-container { grid-template-columns: 1fr !important; }
   .footer-newsletter { grid-column: span 1 !important; }
-
-  /* Blog featured layout tweak */
-  .featured-body > div[style*="flex"] {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-  }
+  .bottom-container { flex-direction: column; gap: 12px; text-align: center; }
 }
 
 /* ==========================================
-   ===  SMALL MOBILE  (max 480px)  ===
+   SMALL MOBILE  (max-width: 480px)
    ========================================== */
 @media (max-width: 480px) {
 
-  /* Typography */
+  .container { padding: 0 16px; }
+  .header-container { padding: 10px 16px; }
+
   .hero-title     { font-size: 1.95rem; }
   .section-title  { font-size: 1.75rem; }
-  .page-hero-title { font-size: 1.9rem !important; }
+  .page-hero-title { font-size: 1.85rem !important; }
 
-  /* Container padding */
-  .container { padding: 0 16px; }
-
-  /* Header */
-  .header-container { padding: 10px 16px; }
-  .logo { font-size: 1.15rem; }
-  .btn.btn-primary.btn-sm { padding: 7px 14px; font-size: 0.8rem; }
-
-  /* Stats */
-  .stats-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 16px;
-  }
   .stat-number { font-size: 2.2rem; }
   .stat-suffix { font-size: 1.6rem; }
 
-  /* Services section headings */
   .service-card { padding: 24px 20px; }
-  .service-card-title { font-size: 1.2rem; }
-
-  /* Planner */
   .planner-summary { padding: 20px !important; }
-  #price-number-parent { font-size: 2.8rem !important; }
 
-  /* Portfolio */
   .port-body { padding: 20px; }
-  .port-title { font-size: 1.1rem; }
-  .port-metrics { gap: 8px; }
-  .metric-val { font-size: 1.1rem; }
-  .stats-bar-grid { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+  .port-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
   .bar-stat-num { font-size: 2rem; }
 
-  /* Blog */
-  .blog-card-body { padding: 18px; }
   .featured-body { padding: 18px !important; }
-  .post-title { font-size: 1.15rem !important; }
+  .blog-card-body { padding: 18px; }
+  .sidebar-card { padding: 20px; }
 
-  /* About story card */
   .story-card { padding: 28px 20px; }
   .story-year { font-size: 3rem; }
-
-  /* Team & values */
   .value-card { padding: 24px 18px; }
   .team-card  { padding: 24px 18px; }
+  .why-item   { flex-direction: column; gap: 12px; }
 
-  /* Why items */
-  .why-item { flex-direction: column; gap: 12px; }
-  .why-num { font-size: 1.6rem; }
+  .contact-info-card  { padding: 28px 20px; }
+  .contact-form-card  { padding: 24px 18px; }
+  .contact-form-container { padding: 24px !important; }
 
-  /* Contact info card */
-  .contact-info-card { padding: 28px 20px; }
-  .contact-form-card { padding: 24px 18px; }
-
-  /* Footer */
   .footer-container { gap: 28px !important; }
-  .footer-bottom { padding: 20px 0; }
-  .bottom-policies { gap: 14px; }
-
-  /* Mobile nav links */
   .mobile-link { font-size: 1.3rem; }
-  .mobile-nav-links { gap: 20px; }
-
-  /* Testimonials */
   .testimonial-card { padding: 20px 16px !important; }
   .testimonial-text { font-size: 0.95rem !important; }
-
-  /* Blog sidebar */
-  .sidebar-card { padding: 20px; }
-  .nl-input { font-size: 0.85rem; }
 }
 
 /* ==========================================
-   ===  VERY SMALL  (max 360px)  ===
+   VERY SMALL  (max-width: 360px)
    ========================================== */
 @media (max-width: 360px) {
-  .hero-title   { font-size: 1.7rem; }
-  .section-title { font-size: 1.55rem; }
-  .page-hero-title { font-size: 1.65rem !important; }
-
-  .stats-grid { grid-template-columns: 1fr !important; }
-
-  .filter-btn { padding: 7px 12px; font-size: 0.78rem; }
-
-  .port-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .posts-grid { grid-template-columns: 1fr !important; }
-
-  .footer-container { grid-template-columns: 1fr !important; }
-}
-
-/* ==========================================
-   UTILITY FIXES — work everywhere
-   ========================================== */
-
-/* Ensure inline style grid overrides become responsive */
-@media (max-width: 768px) {
-
-  /* index.html stats */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
-    grid-template-columns: 1fr 1fr !important;
-  }
-
-  /* index.html services */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(250px"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* index.html planner */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* index.html contact */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(300px"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* planner selector checkboxes */
-  .services-selector[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Stats bar inline override */
-  [style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
-/* contact.html — make form-row stack */
-@media (max-width: 600px) {
-  .form-row {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Mockup card inner grid always wraps */
-@media (max-width: 540px) {
-  .mockup-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .mockup-card.main-stats {
-    grid-column: span 1 !important;
-  }
-}
-
-/* Ensure nav CTA "Let's Talk" button never overflows */
-@media (max-width: 380px) {
-  .nav-actions .btn-primary.btn-sm {
-    display: none;
-  }
+  .hero-title    { font-size: 1.7rem; }
+  .section-title { font-size: 1.5rem; }
+  .stats-grid    { grid-template-columns: 1fr !important; }
+  .filter-btn    { padding: 7px 12px; font-size: 0.78rem; }
+  .nav-actions .btn-primary.btn-sm { display: none; }
 }
