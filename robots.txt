@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aethera-solutions.vercel.app/sitemap.xml
