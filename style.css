@@ -3,36 +3,37 @@
    ========================================== */
 
 /* Design Tokens & Variables */
-:root{
-    --bg-main:#09060F;
-    --bg-card:rgba(24,16,40,.75);
-    --bg-card-hover:rgba(36,24,60,.95);
-
-    --border-color:rgba(255,215,0,.08);
-    --border-hover:#FFD700;
-
-    --primary-grad:linear-gradient(135deg,#FFD700,#FFB300);
-    --secondary-grad:linear-gradient(135deg,#7B2FF7,#F107A3);
-    --accent-green-grad:linear-gradient(135deg,#00D084,#3BFFAA);
-    --danger-grad:linear-gradient(135deg,#FF4B4B,#FF1744);
-
-    --color-primary:#FFD700;
-    --color-secondary:#9C4DFF;
-    --color-green:#00D084;
-    --color-danger:#FF4B4B;
-
-    --text-main:#ffffff;
-    --text-muted:#B7B7C7;
-    --text-dark:#161616;
-
-    --font-heading:'Outfit',sans-serif;
-    --font-body:'Inter',sans-serif;
-
-    --transition-smooth:all .35s ease;
-    --border-radius-lg:18px;
-    --border-radius-md:12px;
-    --border-radius-sm:8px;
+:root {
+    --bg-main: #07080d;
+    --bg-card: rgba(13, 19, 33, 0.5);
+    --bg-card-hover: rgba(20, 30, 50, 0.7);
+    --border-color: rgba(255, 255, 255, 0.06);
+    --border-hover: rgba(0, 242, 254, 0.4);
+    
+    /* Neon Gradient Schemes */
+    --primary-grad: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    --secondary-grad: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+    --accent-green-grad: linear-gradient(135deg, #00f5a0 0%, #00d9f6 100%);
+    --danger-grad: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+    
+    /* Colors */
+    --color-primary: #00f2fe;
+    --color-secondary: #7f00ff;
+    --color-green: #00f5a0;
+    --color-danger: #ff4b2b;
+    --text-main: #ffffff;
+    --text-muted: #8a99ad;
+    --text-dark: #0f172a;
+    
+    /* Typography & Sizing */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --border-radius-lg: 16px;
+    --border-radius-md: 10px;
+    --border-radius-sm: 6px;
 }
+
 /* Base Styles & Resets */
 * {
     margin: 0;
