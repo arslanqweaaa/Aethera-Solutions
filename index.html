@@ -91,13 +91,18 @@
                 </div>
 
                 <!-- Right Visual (Dashboard Mockup) -->
-                <div class="hero-visual scroll-reveal fade-left">
-                    <div class="floating-element element-1">AI Optimized</div>
-                    <div class="floating-element element-2">Global CDN</div>
-                    <div class="floating-element element-3">Schema Vitals</div>
+                <div class="hero-visual scroll-reveal fade-left tilt-card-container">
+                    <div class="floating-element element-1 floating-3d-element">AI Optimized</div>
+                    <div class="floating-element element-2 floating-3d-element" style="animation-delay: 1.5s;">Global CDN</div>
+                    <div class="floating-element element-3 floating-3d-element" style="animation-delay: 3s;">Schema Vitals</div>
                     
-                    <div class="visual-wrapper">
-                        <div class="dashboard-mockup">
+                    <div class="visual-wrapper tilt-card" style="transform-style: preserve-3d;">
+                        <!-- Glowing 3D Holographic Backdrop -->
+                        <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; opacity: 0.18; pointer-events: none; border-radius: var(--border-radius-lg); overflow: hidden;">
+                            <img src="images/hero_3d_engine.png" alt="3D Engine Core" class="spinning-3d-element" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div class="dashboard-mockup tilt-card-content" style="background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(20px);">
                             <div class="mockup-header">
                                 <div class="dots">
                                     <div class="dot red"></div>
@@ -210,35 +215,43 @@
                 
                 <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                     <!-- Web Design -->
-                    <div class="service-card card-glass scroll-reveal fade-up" style="padding: 30px;">
-                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🎨</span></div>
-                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">UX/UI Design</h3>
-                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Immersive, user-centric interfaces crafted with neuro-design principles to significantly boost engagement.</p>
-                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Architecture →</a>
+                    <div class="service-card card-glass-3d tilt-card scroll-reveal fade-up" style="padding: 30px;">
+                        <div class="tilt-card-content">
+                            <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🎨</span></div>
+                            <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">UX/UI Design</h3>
+                            <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Immersive, user-centric interfaces crafted with neuro-design principles to significantly boost engagement.</p>
+                            <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Architecture →</a>
+                        </div>
                     </div>
                     
                     <!-- Full Stack Dev -->
-                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 100ms; padding: 30px;">
-                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">⚡</span></div>
-                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Next-Gen Development</h3>
-                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Lightning-fast architectures built for infinite scalability and security.</p>
-                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Tech Stack →</a>
+                    <div class="service-card card-glass-3d tilt-card scroll-reveal fade-up" style="transition-delay: 100ms; padding: 30px;">
+                        <div class="tilt-card-content">
+                            <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">⚡</span></div>
+                            <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Next-Gen Development</h3>
+                            <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Lightning-fast architectures built for infinite scalability and security.</p>
+                            <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Tech Stack →</a>
+                        </div>
                     </div>
                     
                     <!-- SEO -->
-                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 200ms; padding: 30px;">
-                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🚀</span></div>
-                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Algorithmic SEO</h3>
-                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Deep technical SEO, schema markup, and content silos to dominate search.</p>
-                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View SEO Strategy →</a>
+                    <div class="service-card card-glass-3d tilt-card scroll-reveal fade-up" style="transition-delay: 200ms; padding: 30px;">
+                        <div class="tilt-card-content">
+                            <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">🚀</span></div>
+                            <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">Algorithmic SEO</h3>
+                            <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Deep technical SEO, schema markup, and content silos to dominate search.</p>
+                            <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View SEO Strategy →</a>
+                        </div>
                     </div>
                     
                     <!-- Conversion Optimization -->
-                    <div class="service-card card-glass scroll-reveal fade-up" style="transition-delay: 300ms; padding: 30px;">
-                        <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">📈</span></div>
-                        <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">CRO & Funnel Mapping</h3>
-                        <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Data-driven A/B testing and funnel optimization to turn traffic into paying customers.</p>
-                        <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Conversion Logic →</a>
+                    <div class="service-card card-glass-3d tilt-card scroll-reveal fade-up" style="transition-delay: 300ms; padding: 30px;">
+                        <div class="tilt-card-content">
+                            <div class="service-icon" style="margin-bottom: 20px;"><span style="font-size:2.5rem;">📈</span></div>
+                            <h3 class="service-title" style="font-family: var(--font-heading); margin-bottom: 15px; font-size: 1.3rem;">CRO & Funnel Mapping</h3>
+                            <p class="service-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">Data-driven A/B testing and funnel optimization to turn traffic into paying customers.</p>
+                            <a href="services.html" class="service-link" style="color: var(--color-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Conversion Logic →</a>
+                        </div>
                     </div>
                 </div>
             </div>
